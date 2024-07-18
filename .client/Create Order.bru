@@ -1,0 +1,23 @@
+meta {
+  name: Create Order
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseURL}}/orders
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "products": [
+      "clyknhej500004c4u6j4tk0ap"
+    ]
+  }
+}
